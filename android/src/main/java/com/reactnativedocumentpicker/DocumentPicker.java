@@ -60,6 +60,7 @@ public class DocumentPicker extends ReactContextBaseJavaModule implements Activi
         } else {
             intent = new Intent(Intent.ACTION_PICK);
         }
+        intent.setType("*/*");
         intent.addCategory(Intent.CATEGORY_OPENABLE);
 
         if (!args.isNull("filetype")) {
