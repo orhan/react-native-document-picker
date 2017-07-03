@@ -82,7 +82,7 @@ public class DocumentPicker extends ReactContextBaseJavaModule implements Activi
 
     // removed @Override temporarily just to get it working on RN0.33 and RN0.32
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode != READ_REQUEST_CODE)
+        if (requestCode != READ_REQUEST_CODE ||  callback == null)
             return;
 
         if (resultCode != Activity.RESULT_OK) {
